@@ -27,15 +27,18 @@ function TodoForm({ addTodo }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        className="input"
-        value={value}
-        placeholder="Add Todo..."
-        onChange={e => setValue(e.target.value)}
-      />
-    </form>
+    <div>
+      {/* <button onClick={() => this.toggleText()}> */}
+      {/* <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          className="input"
+          value={value}
+          placeholder="Add Todo..."
+          onChange={e => setValue(e.target.value)}
+        />
+      </form> */}
+    </div>
   );
 }
 
@@ -73,7 +76,11 @@ function App() {
 
   return (
     <div class="app">
-      <ul class="todo-list">
+      <div role="button" aria-expanded="false">
+        Expanded text added to this
+      </div>
+
+      {/* <ul class="todo-list">
         {todos.map((todo, index) => (
           <Todo
             key={index}
@@ -84,7 +91,7 @@ function App() {
           />
         ))}
         <TodoForm addTodo={addTodo} />
-      </ul>
+      </ul> */}
     </div>
   );
 }
